@@ -1,0 +1,132 @@
+En este archivo se describe el proceso de creación de un repositorio y de conexión con la versión
+en línea. Las secciones de código se escriben entre <> y pueden ser varias líneas.
+
+Primero se crea una carpeta en algún sitio del equipo.
+Esa carpeta contiene archivos con código.
+
+Para inicializar el tracking de git en esa carpeta se usa el comando:
+
+<
+git init
+>
+
+Git inicializar, por default se inicializa en el branch (rama) master
+Git genera una carpeta oculta cuando se ejecuta el comando anterior.
+Para poder ver esos archivos ocultos se usa:
+
+<
+ls -la
+>
+
+ls: enlistar, -la archivos ocultos.
+
+El marcador U en los archivos de Visual Studio Code significa Unadded,
+es decir, no están agregados, si se agregan con el comando:
+
+<
+git add [nombre del archvio dentro del repositorio o carpeta, por ejemplo practicas.txt]
+>
+
+Cuando un archivo está agregado cambia el marcador por A de Added.
+
+Para agregar todos los archivos en un repositorio, entonces se usa el comando:
+
+<
+git add .
+>
+
+Cada cambio que se va a subir en el repositorio debe llevar un comentario para identificar
+qué cambió en esa versión, por ejemplo, "versión optimizada", etc.
+
+<
+git commit -m "[Comentario]"
+>
+
+Para subir un cambio a GitHub, primero se debe generar una SSH Key que debe guardarse en algún lugar del equipo
+excepto y nunca en una ubicación que se use para subir cambios porque puede ser muy inseguro.
+
+Para encontrar una ubicación segura, se usa:
+
+<
+cd ~ 
+>
+
+para ir atras en las carpetas,
+
+<
+pwd
+>
+
+Para encontrar la carpeta del usuario, en mi caso, /c/users/aavil
+
+luego se crea el directorio (carpeta) con
+
+<
+mkdir .ssh
+>
+
+al escribir
+
+<
+pwd
+>
+
+nos va a llevar al directorio donde estan guardadas las llaves ssh.
+
+una vez que estemos en el directorio .ssh se ejecuta el generador de llaves con mi correo:
+
+<
+ssh-keygen -t ed25519 -C "your_email@example.com"
+>
+
+Cuando se ejecute la llave preguntará dónde guardarla y qué password usar, por default lo coloca en la ubicación
+creada y sin password.
+
+se debe localizar el archivo _____.pub es decir, la llave con extención .pub que significa publica
+y luego copiarlo y ejecutar el comando usando el ejemplo con mi llave (id_ed25519.pub):
+
+<
+cat [archivo.pub]
+>
+
+luego el resultado es la llave, que se deberá colocar en add key en GitHub.
+
+Una vez que la llave está collocada, veamos las opciones que da GitHub. 
+Y da las siguientes lineas de comando para poder crear un repositorio nuevo:
+
+para protocolo HTTPS:
+
+<
+git init 
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/aavilal/practicas_git.git
+git push -u origin main
+>
+
+Para protocolo SSH:
+
+<
+echo "# practicas_git" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:aavilal/practicas_git.git
+git push -u origin main
+>
+
+La línea que dice remote es la que usaremos para dar de alta nuestro repositorio.
+
+<
+git remote add origin git@github.com:aavilal/practicas_git.git
+>
+
+Pero se debe ejecutar cuando <cd> está en la ubicación de nuestro proyecto o 
+por lo menos hay una tarea git inicializada.
+Para subir los cambios de nuestros archivos agregados, se usa el comando:
+
+<
+git push -u origin master
+>
