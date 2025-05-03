@@ -149,5 +149,13 @@ Para volver a una rama ya creada:
 git checkout master
 >
 
+La rama master nunca debe tocarse, de hecho, debe estar bloqueada, hasta que se apruebe el cambio.
+
+Para subir un push en una rama específica:
+
+<
+git push origin rama
+>
+
 
 
