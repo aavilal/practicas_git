@@ -137,3 +137,8 @@ más actualizada, posteriormente, se hace el push.
 IMPORTANTE: Cuando todos los desarrolladores terminaron sus camnbios, desde el administrador de versiones
 se hace un merge entre ramas para ir integrando cada cambio, si hay un cambio que necesita ajustes,
 se colocan comentarios y se regresa para que se ajuste de esa manera.
+
+Cambiar el nombre de un commit
+<
+git commit --amend -m "Nuevo mensaje del commit"
+>
