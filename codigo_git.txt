@@ -131,3 +131,9 @@ Para subir los cambios de nuestros archivos agregados, se usa el comando:
 git push -u origin master
 >
 
+IMPORTANTE: Cuando se vaya a hacer un push, por lo general se debe hacer un pull primero para tener la versión 
+más actualizada, posteriormente, se hace el push.
+
+IMPORTANTE: Cuando todos los desarrolladores terminaron sus camnbios, desde el administrador de versiones
+se hace un merge entre ramas para ir integrando cada cambio, si hay un cambio que necesita ajustes,
+se colocan comentarios y se regresa para que se ajuste de esa manera.
