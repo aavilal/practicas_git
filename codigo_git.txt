@@ -142,3 +142,58 @@ Cambiar el nombre de un commit
 <
 git commit --amend -m "Nuevo mensaje del commit"
 >
+
+=======
+=======
+Para abrir el repositorio en VS code se usa el comando
+
+<
+code .
+>
+
+Para poder hacer un checkout o switcheo a una rama se usa el siguiente código
+
+<
+git checkout -b rama_alterna
+>
+
+Para volver a una rama ya creada:
+
+<
+git checkout master
+>
+
+La rama master nunca debe tocarse, de hecho, debe estar bloqueada, hasta que se apruebe el cambio.
+
+Para subir un push en una rama específica:
+
+<
+git push origin rama
+>
+
+Para saber cuantas ramas hay en el git local:
+
+<
+git branch
+>
+
+Histórico de cambios:
+
+<
+git log
+>
+
+Si quieremos regresar a una versión anterior:
+
+<
+git revert id_commit
+>
+
+IMPORTANTE: A veces hay errores en el ambiente que deben resolverse de forma manual siguiendo las instrucciones.
+
+Si quieres actualizar un archivo de una rama en específico:
+
+<
+git pull origin rama
+>
+
