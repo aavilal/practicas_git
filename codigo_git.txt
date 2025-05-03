@@ -130,3 +130,24 @@ Para subir los cambios de nuestros archivos agregados, se usa el comando:
 <
 git push -u origin master
 >
+
+Para abrir el repositorio en VS code se usa el comando
+
+<
+code .
+>
+
+Para poder hacer un checkout o switcheo a una rama se usa el siguiente código
+
+<
+git checkout -b rama_alterna
+>
+
+Para volver a una rama ya creada:
+
+<
+git checkout master
+>
+
+
+
