@@ -157,5 +157,32 @@ Para subir un push en una rama específica:
 git push origin rama
 >
 
+Para saber cuantas ramas hay en el git local:
+
+<
+git branch
+>
+
+Histórico de cambios:
+
+<
+git log
+>
+
+Si quieremos regresar a una versión anterior:
+
+<
+git revert id_commit
+>
+
+IMPORTANTE: A veces hay errores en el ambiente que deben resolverse de forma manual siguiendo las instrucciones.
+
+Si quieres actualizar un archivo de una rama en específico:
+
+<
+git pull origin rama
+>
+
+
 
 
